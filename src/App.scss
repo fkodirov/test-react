@@ -1,0 +1,320 @@
+#root {
+  max-width: 1440px;
+  width: 100%;
+  padding: 48px 62px 32px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-image: url("assets/Bitcoin.svg"), url("assets/Litecoin.svg"),
+    url("assets/Ethereum.svg");
+  background-repeat: no-repeat;
+  background-position:
+    calc(100% - 65px) 0,
+    calc(100% - 282px) 277px,
+    calc(100% - 62px) 508px;
+}
+
+.title {
+  max-width: 1008px;
+  margin-bottom: 44px;
+  font-size: 84px;
+  font-weight: 700;
+  line-height: 100.8px;
+  text-transform: uppercase;
+  span {
+    background: linear-gradient(
+      92.01deg,
+      rgba(124, 111, 207, 0.97) 0%,
+      rgba(116, 174, 170, 0.95) 49.13%,
+      #6fcf97 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.subscribe {
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 40.8px;
+  margin-bottom: 88px;
+  color: rgba(130, 130, 130, 1);
+}
+
+.subscribe-blocks {
+  display: flex;
+  // gap: 126px;
+  max-width: 554px;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  .block-name {
+    margin-bottom: 2px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: uppercase;
+  }
+  .block-value {
+    font-size: 18px;
+    line-height: 24px;
+    color: #f2f2f24d;
+  }
+}
+button {
+  font-family: "Teko", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 28px;
+  text-transform: uppercase;
+
+  margin-bottom: 76px;
+  max-width: 532px;
+  width: 100%;
+  padding: 14px 0;
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(
+    92.01deg,
+    rgba(124, 111, 207, 0.97) 0%,
+    rgba(116, 174, 170, 0.95) 49.13%,
+    #6fcf97 100%
+  );
+  box-shadow: 0px 0px 150px 0px #a5bfb46b;
+  cursor: pointer;
+  &:hover {
+    background: linear-gradient(
+      92.01deg,
+      rgba(93, 76, 205, 0.97) 0%,
+      rgba(79, 167, 162, 0.95) 49.13%,
+      #4dcb82 100%
+    );
+    box-shadow: 0px 0px 150px 0px #81b9a16b;
+  }
+}
+
+.download {
+  display: flex;
+  gap: 20px;
+  .store {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    max-width: 132px;
+    width: 100%;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background: #302d2d57;
+    color: #f2f2f266;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    .store-text {
+      font-size: 12px;
+      line-height: 12px;
+      margin-bottom: 2px;
+    }
+    .store-name {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &:hover {
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0%,
+      100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.review {
+  position: absolute;
+  max-width: 288px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 20px;
+  gap: 16px;
+  border-radius: 20px;
+  background-color: #302d2d57;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:nth-of-type(1) {
+    top: 172px;
+    right: 82px;
+  }
+  &:nth-of-type(2) {
+    top: 334px;
+    right: 194px;
+  }
+  &:nth-of-type(3) {
+    top: 496px;
+    right: 78px;
+  }
+  &:nth-of-type(4) {
+    top: 658px;
+    right: 194px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    background: linear-gradient(
+        92.01deg,
+        rgba(124, 111, 207, 0.194) 0%,
+        rgba(116, 174, 170, 0.19) 49.13%,
+        rgba(111, 207, 151, 0.2) 100%
+      )
+      border-box;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) padding-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+  }
+  .review-header {
+    display: flex;
+    margin-bottom: 16px;
+    & div:first-child {
+      margin-right: 20px;
+    }
+    .username {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px;
+      text-transform: uppercase;
+    }
+    .login {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      color: #f2f2f266;
+    }
+  }
+  .review-body {
+    font-size: 18px;
+    line-height: 20.7px;
+  }
+}
+
+@media (max-width: 1400px) {
+  #root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .reviews {
+    display: none;
+  }
+  .title {
+    text-align: center;
+  }
+  .download {
+    align-self: stretch;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 992px) {
+  #root {
+    padding: 30px 40px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 25px 30px 20px;
+  }
+  .title {
+    font-size: 64px;
+    line-height: 100%;
+    word-break: break-word;
+  }
+  .subscribe{
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  #root {
+    padding: 25px 30px 20px;
+  }
+  .title {
+    font-size: 48px;
+    line-height: 100%;
+  }
+  .subscribe{
+      font-size: 32px;
+      line-height: 100%;
+      margin-bottom: 50px;
+  }
+  .subscribe-blocks {
+    margin-bottom: 50px;
+    .block-name {
+      font-size: 32px;
+      line-height: 100%;
+    }
+    .block-value {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  button{
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  #root {
+    padding: 20px 16px 12px;
+    background-size: 136px 188px, 140px 160px, 136px 214px;
+    background-position:
+    calc(100% - 16px) 0,
+    calc(100% - 164px) 70px,
+    calc(100% - 16px) 203px;
+  }
+  .title {
+    margin-bottom: 20px;
+    font-size: 40px;
+    line-height: 43.2px;
+  }
+  .subscribe {
+    max-width: 204px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 32px;
+  }
+  .subscribe-blocks {
+    margin-bottom: 20px;
+    .block-name {
+      font-size: 28px;
+      line-height: 100%;
+    }
+    .block-value {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  button{
+    font-size: 20px;
+    line-height: 24px;
+    padding: 12px 0;
+    margin-bottom: 18px;
+  }
+}
